@@ -35,6 +35,12 @@
             border: 1px solid var(--clr-border);
             border-radius: 8px;
             position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--clr-sienna);
         }
         .step-number {
             position: absolute;
