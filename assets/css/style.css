@@ -489,6 +489,72 @@ textarea.form-control:not(:placeholder-shown) ~ .floating-label {
   transform: translateY(0);
 }
 
+/* Modern 3D Benefits List */
+.benefits-list-3d {
+  perspective: 1500px;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.benefit-row-3d {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem;
+  background: transparent;
+  border-bottom: 1px solid var(--clr-border);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  transform-origin: left center;
+}
+.benefit-row-3d:last-child {
+  border-bottom: none;
+}
+.benefit-row-3d:hover {
+  transform: rotateY(-6deg) scale(1.02) translateZ(40px);
+  background: var(--clr-card-bg); /* subtle solid pop */
+  border-radius: 12px;
+  border-bottom-color: transparent;
+  box-shadow: 20px 20px 40px rgba(0,0,0,0.08);
+}
+[data-theme="dark"] .benefit-row-3d:hover {
+  background: rgba(30, 30, 30, 0.8);
+  box-shadow: 20px 20px 40px rgba(0,0,0,0.5);
+}
+.benefit-row-3d .icon-3d {
+  width: 70px;
+  height: 70px;
+  background: var(--clr-sienna);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.benefit-row-3d:hover .icon-3d {
+  transform: translateZ(80px) rotate(-15deg);
+  box-shadow: 0 15px 30px rgba(184, 80, 66, 0.4);
+}
+.benefit-row-3d .content-3d {
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.benefit-row-3d:hover .content-3d {
+  transform: translateZ(50px);
+}
+.benefit-row-3d h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.benefit-row-3d p {
+  color: var(--clr-text-muted);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
 /* Page Headers */
 .page-header {
   padding: 10rem 0 6rem;
