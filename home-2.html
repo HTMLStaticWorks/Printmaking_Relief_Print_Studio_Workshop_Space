@@ -83,41 +83,54 @@
             opacity: 1;
         }
         
-        .horizontal-timeline {
+        .editorial-timeline {
+            max-width: 900px;
+            margin: 4rem auto 0;
             display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-top: 4rem;
+            flex-direction: column;
         }
-        .horizontal-timeline::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--clr-border);
-            z-index: 1;
-        }
-        .timeline-step {
-            flex: 1;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            padding: 0 1rem;
-        }
-        .timeline-icon {
-            width: 80px;
-            height: 80px;
-            background-color: var(--clr-bg-main);
-            border: 2px solid var(--clr-sienna);
-            border-radius: 50%;
+        .editorial-step {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
+            gap: 4rem;
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--clr-border);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .editorial-step:last-child {
+            border-bottom: none;
+        }
+        .editorial-step:hover {
+            transform: translateX(15px);
+        }
+        .step-number {
+            font-size: 7rem;
+            font-weight: 800;
+            line-height: 0.8;
             color: var(--clr-sienna);
+            opacity: 0.15;
+            transition: all 0.5s ease;
+            font-family: serif;
+        }
+        .editorial-step:hover .step-number {
+            opacity: 0.9;
+            transform: scale(1.1);
+        }
+        .step-content {
+            flex: 1;
+        }
+        .step-content h4 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        .editorial-step:hover .step-content h4 {
+            color: var(--clr-sienna);
+        }
+        .step-content p {
+            font-size: 1.15rem;
+            color: var(--clr-text-muted);
+            margin: 0;
         }
         
         .tools-showcase {
@@ -173,13 +186,17 @@
                 grid-template-columns: 1fr;
                 grid-auto-rows: 300px;
             }
-            .horizontal-timeline {
+            .editorial-step {
                 flex-direction: column;
-                align-items: center;
-                gap: 3rem;
+                align-items: flex-start;
+                gap: 1.5rem;
+                padding: 3rem 0;
             }
-            .horizontal-timeline::before {
-                display: none;
+            .step-number {
+                font-size: 5rem;
+            }
+            .editorial-step:hover {
+                transform: translateX(5px);
             }
             .tools-showcase {
                 grid-template-columns: 1fr;
@@ -345,26 +362,34 @@
                     <h2>The Workshop Experience</h2>
                     <p class="text-muted">How our printmaking sessions work.</p>
                 </div>
-                <div class="horizontal-timeline">
-                    <div class="timeline-step">
-                        <div class="timeline-icon">1</div>
-                        <h4>Design</h4>
-                        <p class="text-muted">Draft and transfer your original sketch onto the printing block.</p>
+                <div class="editorial-timeline">
+                    <div class="editorial-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Design</h4>
+                            <p>Draft and transfer your original sketch onto the printing block with precision.</p>
+                        </div>
                     </div>
-                    <div class="timeline-step">
-                        <div class="timeline-icon">2</div>
-                        <h4>Carve</h4>
-                        <p class="text-muted">Use professional gouges to carefully carve away the negative space.</p>
+                    <div class="editorial-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>Carve</h4>
+                            <p>Use professional gouges to carefully carve away the negative space, bringing your design to life.</p>
+                        </div>
                     </div>
-                    <div class="timeline-step">
-                        <div class="timeline-icon">3</div>
-                        <h4>Ink</h4>
-                        <p class="text-muted">Roll out a perfectly even layer of premium archival ink.</p>
+                    <div class="editorial-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Ink</h4>
+                            <p>Roll out a perfectly even layer of premium archival ink using high-density brayers.</p>
+                        </div>
                     </div>
-                    <div class="timeline-step">
-                        <div class="timeline-icon">4</div>
-                        <h4>Print</h4>
-                        <p class="text-muted">Run your block through our vintage etching presses for the final reveal.</p>
+                    <div class="editorial-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Print</h4>
+                            <p>Run your block through our vintage etching presses for the final dramatic reveal.</p>
+                        </div>
                     </div>
                 </div>
             </div>
