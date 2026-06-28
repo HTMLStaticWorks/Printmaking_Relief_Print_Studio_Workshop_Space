@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Printmaking & Relief Print Studio</title>
+    <meta name="description" content="Learn about our studio story, mission, and the artist community behind our printmaking workshops.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .about-split {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        .about-split.reverse {
+            flex-direction: row-reverse;
+        }
+        .about-text, .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: var(--clr-bg-main);
+            border: 1px solid var(--clr-border);
+            border-radius: 8px;
+            position: relative;
+        }
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--clr-sienna);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+        }
+        @media (max-width: 992px) {
+            .about-split, .about-split.reverse {
+                flex-direction: column;
+            }
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Relief Studio
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshop.html" class="nav-link">Workshops</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1.5rem; font-size: 0.95rem;">Login</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header -->
+        <header class="page-header">
+            <div class="container reveal">
+                <h1>About the Studio</h1>
+                <p class="text-muted" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Preserving the tactile art of printmaking in a digital world.</p>
+            </div>
+        </header>
+
+        <!-- Section 1: Studio Story -->
+        <section class="py-section">
+            <div class="container">
+                <div class="about-split reveal">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2012 by master printmaker Julian Hayes, Relief Studio began as a small basement operation with a single vintage etching press. Over the years, it has blossomed into a comprehensive creative sanctuary for artists of all levels.</p>
+                        <p>We believe in the power of handmade art. The smell of ink, the texture of fine cotton paper, and the physical effort required to pull a perfect print are experiences that cannot be replicated digitally.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1518903429395-58547ebddbe0?auto=format&fit=crop&q=80&w=1000" alt="Vintage Printing Press">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Mission & Philosophy -->
+        <section class="py-section bg-sec">
+            <div class="container">
+                <div class="about-split reverse reveal">
+                    <div class="about-text">
+                        <h2>Mission & Philosophy</h2>
+                        <p>Our mission is to make traditional printmaking techniques accessible while fostering a supportive community of creators. We aim to bridge the gap between historical craftsmanship and contemporary artistic expression.</p>
+                        <p>We prioritize sustainable practices by using eco-friendly inks, safe non-toxic cleaning solvents, and ethically sourced papers whenever possible.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1616428784156-f5b248a39d22?auto=format&fit=crop&q=80&w=1000" alt="Artist examining prints">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Studio Space -->
+        <section class="py-section">
+            <div class="container text-center reveal">
+                <h2>The Studio Space</h2>
+                <p class="text-muted" style="max-width: 700px; margin: 0 auto 3rem;">A 3,000 square foot facility thoughtfully designed for printmakers, by printmakers. Equipped with natural north-facing light and industry-standard ventilation.</p>
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600" alt="Wide Studio Space" style="border-radius: 8px; box-shadow: var(--shadow-md);">
+            </div>
+        </section>
+
+        <!-- Section 4: Our Creative Process -->
+        <section class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center">
+                    <h2>Our Creative Process</h2>
+                    <p class="text-muted">How we approach art in our studio.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Conceptualize</h3>
+                        <p class="text-muted">Every great print starts with a strong concept. We encourage extensive sketching and planning.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Execute</h3>
+                        <p class="text-muted">Meticulous carving, etching, or screen preparation relying on traditional techniques.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Refine</h3>
+                        <p class="text-muted">Proofing, adjusting pressure and ink consistency until the perfect edition is achieved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Artist Community -->
+        <section class="py-section">
+            <div class="container text-center reveal">
+                <h2>A Thriving Community</h2>
+                <p class="text-muted" style="max-width: 600px; margin: 0 auto 3rem;">Join over 200 local artists who call our studio home. We host monthly critiques, open houses, and collaborative portfolio exchanges.</p>
+                <div class="d-flex justify-content-center">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1000" alt="Artists Collaborating" style="border-radius: 8px;">
+                </div>
+                <div class="mt-4">
+                    <a href="pricing.html" class="btn btn-primary">Become a Member</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="nav-brand" style="color: #fff; margin-bottom: 1rem; display: inline-flex;">
+                        <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: var(--clr-sienna);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Relief Studio
+                    </a>
+                    <p>A premium workshop space dedicated to the preservation and progression of traditional printmaking techniques.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Studio</a></li>
+                        <li><a href="services.html">Workshops</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Linocut</a></li>
+                        <li><a href="#">Woodcut</a></li>
+                        <li><a href="#">Etching</a></li>
+                        <li><a href="#">Screen Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for workshop updates and studio news.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; border: none; outline: none; background: rgba(255,255,255,0.1); color: #fff;">
+                        <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">Ig</a>
+                        <a href="#" aria-label="Facebook">Fb</a>
+                        <a href="#" aria-label="Pinterest">Pi</a>
+                        <a href="#" aria-label="YouTube">Yt</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                        <a href="#" aria-label="Behance">Be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Printmaking & Relief Print Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

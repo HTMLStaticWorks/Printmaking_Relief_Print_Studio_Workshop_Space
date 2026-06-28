@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Printmaking & Relief Print Studio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1920') center/cover;
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(43, 43, 43, 0.85);
+            z-index: 1;
+        }
+        .coming-soon-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 2rem;
+        }
+        .coming-soon-content svg {
+            width: 64px;
+            height: 64px;
+            fill: var(--clr-sienna);
+            margin-bottom: 2rem;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        .countdown-item {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            min-width: 100px;
+        }
+        .countdown-value {
+            font-size: 2.5rem;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            color: var(--clr-sienna);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .countdown-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .subscribe-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto 3rem;
+        }
+        .subscribe-form input {
+            flex: 1;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            outline: none;
+            border-radius: 0;
+        }
+        .subscribe-form input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        .social-icons-lg {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .social-icons-lg a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        .social-icons-lg a:hover {
+            background: var(--clr-sienna);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <div class="coming-soon-content reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #fff;">Something Beautiful is Printing...</h1>
+        <p style="font-size: 1.2rem; color: #ccc;">Our new workshop space and online gallery are currently under construction. We will be launching soon!</p>
+
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-value" id="days">24</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="hours">10</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="minutes">45</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="seconds">30</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+
+        <form class="subscribe-form validate-form" novalidate>
+            <input type="email" placeholder="Enter your email to get notified" required>
+            <button type="submit" class="btn btn-primary">Notify Me</button>
+        </form>
+
+        <div class="social-icons-lg">
+            <a href="#" aria-label="Instagram">Ig</a>
+            <a href="#" aria-label="Facebook">Fb</a>
+            <a href="#" aria-label="Pinterest">Pi</a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple Countdown Logic
+        const countDownDate = new Date().getTime() + (24 * 24 * 60 * 60 * 1000); // 24 days from now
+        
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "We are LIVE!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

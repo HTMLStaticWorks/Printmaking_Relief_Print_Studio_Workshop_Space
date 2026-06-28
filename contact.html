@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Printmaking & Relief Print Studio</title>
+    <meta name="description" content="Get in touch with Relief Studio. Find our location, hours, and contact form.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .info-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--clr-card-bg);
+            border: 1px solid var(--clr-border);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        .info-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--clr-bg-sec);
+            color: var(--clr-sienna);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--clr-bg-sec);
+            border: 1px solid var(--clr-border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-text-muted);
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        .contact-form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--clr-card-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--clr-border);
+        }
+        
+        .faq-item {
+            border: 1px solid var(--clr-border);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background: var(--clr-bg-sec);
+            padding: 1.25rem;
+            margin: 0;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--clr-sienna);
+        }
+        .faq-answer {
+            padding: 1.25rem;
+            display: none;
+            background: var(--clr-bg-main);
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form-wrapper {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Relief Studio
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshop.html" class="nav-link">Workshops</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1.5rem; font-size: 0.95rem;">Login</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <header class="page-header" style="background: url('https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?auto=format&fit=crop&q=80&w=1920') center/cover; position: relative;">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.6);"></div>
+            <div class="container reveal" style="position: relative; z-index: 2;">
+                <h1 style="color: #fff;">Get in Touch</h1>
+                <p style="color: #eee; font-size: 1.25rem; max-width: 600px; margin: 0 auto;">We'd love to hear from you. Drop us a line or visit the studio.</p>
+            </div>
+        </header>
+
+        <!-- Section 2: Contact Information & Map -->
+        <section class="py-section">
+            <div class="container reveal">
+                <div class="contact-info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Visit Us</h3>
+                        <p class="text-muted">123 Artisan Way, Studio 4B<br>Creative District, NY 10001</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email Us</h3>
+                        <p class="text-muted">hello@reliefstudio.com<br>workshops@reliefstudio.com</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p class="text-muted">+1 (555) 123-4567<br>Mon-Sat, 9am to 6pm</p>
+                    </div>
+                </div>
+
+                <!-- Section 3: Google Map Placeholder -->
+                <div class="map-placeholder">
+                    Interactive Google Map Placeholder
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Contact Form -->
+        <section class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>Send a Message</h2>
+                    <p class="text-muted">Have a question about a workshop or custom edition?</p>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="validate-form" novalidate>
+                        <div class="d-flex gap-4" style="flex-wrap: wrap;">
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <input type="text" id="name" class="form-control" placeholder=" " required>
+                                <label for="name" class="floating-label">Your Name</label>
+                            </div>
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <input type="email" id="email" class="form-control" placeholder=" " required>
+                                <label for="email" class="floating-label">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" class="form-control" placeholder=" " required>
+                            <label for="subject" class="floating-label">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" class="form-control" placeholder=" " required></textarea>
+                            <label for="message" class="floating-label">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: FAQ -->
+        <section class="py-section">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>General Inquiries</h2>
+                </div>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <h4 class="faq-question">Can I tour the studio before joining?</h4>
+                        <div class="faq-answer">
+                            <p>Absolutely. We host free public studio tours every first Friday of the month from 5 PM to 7 PM. You can also contact us to schedule a private walkthrough.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Do you offer gift cards for workshops?</h4>
+                        <div class="faq-answer">
+                            <p>Yes, digital and physical gift cards are available for any denomination. They can be applied to workshops, memberships, or fine art print purchases.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Where can I park?</h4>
+                        <div class="faq-answer">
+                            <p>There is free street parking available along Artisan Way, and a paid parking garage located just two blocks north on 4th Street.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="nav-brand" style="color: #fff; margin-bottom: 1rem; display: inline-flex;">
+                        <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: var(--clr-sienna);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Relief Studio
+                    </a>
+                    <p>A premium workshop space dedicated to the preservation and progression of traditional printmaking techniques.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Studio</a></li>
+                        <li><a href="services.html">Workshops</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Linocut</a></li>
+                        <li><a href="#">Woodcut</a></li>
+                        <li><a href="#">Etching</a></li>
+                        <li><a href="#">Screen Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for workshop updates and studio news.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; border: none; outline: none; background: rgba(255,255,255,0.1); color: #fff;">
+                        <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">Ig</a>
+                        <a href="#" aria-label="Facebook">Fb</a>
+                        <a href="#" aria-label="Pinterest">Pi</a>
+                        <a href="#" aria-label="YouTube">Yt</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                        <a href="#" aria-label="Behance">Be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Printmaking & Relief Print Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // FAQ Accordion Script
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+                document.querySelectorAll('.faq-question').forEach(q => q.style.color = '');
+                
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                    item.style.color = 'var(--clr-sienna)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

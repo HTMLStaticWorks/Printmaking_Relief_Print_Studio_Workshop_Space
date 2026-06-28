@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Printmaking & Relief Print Studio</title>
+    <meta name="description" content="View our transparent pricing for printmaking workshops, studio memberships, and private lessons.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .pricing-table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-sm);
+            border-radius: 8px;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--clr-card-bg);
+            min-width: 600px;
+        }
+        .pricing-table th, .pricing-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--clr-border);
+        }
+        .pricing-table th {
+            background: var(--clr-bg-sec);
+            font-family: var(--font-heading);
+            font-weight: 500;
+            color: var(--clr-text-main);
+        }
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        .pricing-table tr:hover td {
+            background: var(--clr-bg-sec);
+        }
+        .price-col {
+            font-weight: 600;
+            color: var(--clr-sienna);
+            text-align: right !important;
+        }
+
+        .faq-item {
+            border: 1px solid var(--clr-border);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background: var(--clr-bg-sec);
+            padding: 1.25rem;
+            margin: 0;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--clr-sienna);
+        }
+        .faq-answer {
+            padding: 1.25rem;
+            display: none;
+            background: var(--clr-bg-main);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Relief Studio
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshop.html" class="nav-link">Workshops</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1.5rem; font-size: 0.95rem;">Login</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <header class="page-header">
+            <div class="container reveal">
+                <h1>Transparent Pricing</h1>
+                <p class="text-muted" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Invest in your craft. Clear pricing for our workshops and studio access.</p>
+            </div>
+        </header>
+
+        <!-- Section 2: Workshop Pricing -->
+        <section class="py-section">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>Workshop Pricing</h2>
+                    <p class="text-muted">Single sessions and multi-week courses.</p>
+                </div>
+                
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Workshop Course</th>
+                                <th>Duration</th>
+                                <th>Level</th>
+                                <th class="price-col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Intro to Linocut</td>
+                                <td>1 Day (4 Hours)</td>
+                                <td>Beginner</td>
+                                <td class="price-col">$85</td>
+                            </tr>
+                            <tr>
+                                <td>Advanced Multi-Block Woodcut</td>
+                                <td>4 Weeks (12 Hours)</td>
+                                <td>Intermediate</td>
+                                <td class="price-col">$280</td>
+                            </tr>
+                            <tr>
+                                <td>Copper Etching & Aquatint</td>
+                                <td>3 Weeks (9 Hours)</td>
+                                <td>Intermediate</td>
+                                <td class="price-col">$220</td>
+                            </tr>
+                            <tr>
+                                <td>Screen Printing Basics</td>
+                                <td>2 Days (8 Hours)</td>
+                                <td>Beginner</td>
+                                <td class="price-col">$150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="services.html" class="btn btn-outline">View Course Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Membership Pricing -->
+        <section class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>Studio Memberships</h2>
+                    <p class="text-muted">Monthly access plans for independent artists.</p>
+                </div>
+
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Plan Features</th>
+                                <th>Part-Time Access</th>
+                                <th>Full-Time Access</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Monthly Rate</strong></td>
+                                <td style="color: var(--clr-sienna); font-weight: 500;">$120 / month</td>
+                                <td style="color: var(--clr-sienna); font-weight: 500;">$250 / month</td>
+                            </tr>
+                            <tr>
+                                <td>Press Time Included</td>
+                                <td>20 Hours</td>
+                                <td>Unlimited (24/7)</td>
+                            </tr>
+                            <tr>
+                                <td>Storage Space</td>
+                                <td>Shared Flat File</td>
+                                <td>Dedicated Flat File + Locker</td>
+                            </tr>
+                            <tr>
+                                <td>Workshop Discount</td>
+                                <td>10% Off</td>
+                                <td>20% Off</td>
+                            </tr>
+                            <tr>
+                                <td>Gallery Exhibition Entry</td>
+                                <td>Standard Fee</td>
+                                <td>Free Entry</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="register.html" class="btn btn-primary">Apply for Membership</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Private Lessons -->
+        <section class="py-section">
+            <div class="container reveal">
+                <div style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <img src="https://images.unsplash.com/photo-1594122230689-45899d9e6f69?auto=format&fit=crop&q=80&w=800" alt="Private Lesson" style="border-radius: 8px; box-shadow: var(--shadow-md);">
+                    </div>
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2>Private Mentorship Rates</h2>
+                        <p>Receive dedicated, one-on-one instruction tailored to your specific artistic goals. Perfect for portfolio building or mastering complex techniques.</p>
+                        
+                        <div style="margin-top: 2rem;">
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--clr-border); padding: 1rem 0;">
+                                <span>Single Hour Session</span>
+                                <strong style="color: var(--clr-sienna);">$75</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--clr-border); padding: 1rem 0;">
+                                <span>Half-Day Intensive (4 Hours)</span>
+                                <strong style="color: var(--clr-sienna);">$250</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--clr-border); padding: 1rem 0;">
+                                <span>Portfolio Review & Consultation</span>
+                                <strong style="color: var(--clr-sienna);">$50</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="contact.html" class="btn btn-outline">Request a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: FAQ -->
+        <section class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>Pricing FAQs</h2>
+                    <p class="text-muted">Questions about billing and memberships.</p>
+                </div>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <h4 class="faq-question">Are there any hidden fees with memberships?</h4>
+                        <div class="faq-answer">
+                            <p>No hidden fees. Membership fees cover access to the space and heavy equipment. Consumables like paper and specific colored inks must be purchased separately.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Do you offer student or artist discounts?</h4>
+                        <div class="faq-answer">
+                            <p>Yes, we offer a 15% discount on memberships for currently enrolled art students and recent graduates (within 1 year). Please contact us with your ID.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">What is the cancellation policy for workshops?</h4>
+                        <div class="faq-answer">
+                            <p>Full refunds are provided for cancellations made at least 7 days before the workshop start date. Cancellations within 7 days will receive studio credit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="nav-brand" style="color: #fff; margin-bottom: 1rem; display: inline-flex;">
+                        <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: var(--clr-sienna);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Relief Studio
+                    </a>
+                    <p>A premium workshop space dedicated to the preservation and progression of traditional printmaking techniques.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Studio</a></li>
+                        <li><a href="services.html">Workshops</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Linocut</a></li>
+                        <li><a href="#">Woodcut</a></li>
+                        <li><a href="#">Etching</a></li>
+                        <li><a href="#">Screen Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for workshop updates and studio news.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; border: none; outline: none; background: rgba(255,255,255,0.1); color: #fff;">
+                        <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">Ig</a>
+                        <a href="#" aria-label="Facebook">Fb</a>
+                        <a href="#" aria-label="Pinterest">Pi</a>
+                        <a href="#" aria-label="YouTube">Yt</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                        <a href="#" aria-label="Behance">Be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Printmaking & Relief Print Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // FAQ Accordion Script
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+                document.querySelectorAll('.faq-question').forEach(q => q.style.color = '');
+                
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                    item.style.color = 'var(--clr-sienna)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Printmaking & Relief Print Studio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1920') center/cover;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+        .auth-card {
+            background: var(--clr-card-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-hover);
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+            z-index: 2;
+            border: 1px solid var(--clr-border);
+        }
+        .auth-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .auth-header svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--clr-sienna);
+            margin-bottom: 1rem;
+        }
+        .auth-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--clr-text-muted);
+        }
+        .auth-footer a {
+            color: var(--clr-sienna);
+            font-weight: 500;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <div class="auth-card reveal">
+        <div class="auth-header">
+            <a href="index.html">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </a>
+            <h2>Welcome Back</h2>
+            <p class="text-muted">Sign in to your studio account.</p>
+        </div>
+
+        <form class="validate-form" novalidate>
+            <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder=" " required>
+                <label for="email" class="floating-label">Email Address</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" placeholder=" " required>
+                <label for="password" class="floating-label">Password</label>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-4" style="font-size: 0.9rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" style="accent-color: var(--clr-sienna);">
+                    Remember Me
+                </label>
+                <a href="#" style="color: var(--clr-sienna);">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+
+        <div class="auth-footer">
+            Don't have an account? <a href="register.html">Create one</a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

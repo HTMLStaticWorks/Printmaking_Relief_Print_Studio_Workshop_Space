@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found | Printmaking & Relief Print Studio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .error-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: clamp(6rem, 15vw, 10rem);
+            font-family: var(--font-heading);
+            font-weight: 500;
+            color: var(--clr-border);
+            line-height: 1;
+            margin-bottom: 1rem;
+            background: url('https://images.unsplash.com/photo-1547822297-bea8eb5e5eab?auto=format&fit=crop&q=80&w=800') center/cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        [data-theme="dark"] .error-code {
+            color: var(--clr-text-muted);
+            -webkit-text-fill-color: initial;
+            background: none;
+        }
+        .error-search {
+            display: flex;
+            margin: 2rem auto;
+            max-width: 400px;
+        }
+        .error-search input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--clr-border);
+            background: var(--clr-bg-main);
+            color: var(--clr-text-main);
+            outline: none;
+        }
+        .error-search button {
+            padding: 0.75rem 1.5rem;
+            background: var(--clr-sienna);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Relief Studio
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshop.html" class="nav-link">Workshops</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1.5rem; font-size: 0.95rem;">Login</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="error-section">
+            <div class="error-content reveal">
+                <div class="error-code">404</div>
+                <h2>Page Not Found</h2>
+                <p class="text-muted" style="margin-bottom: 2rem;">It looks like you've wandered off the edge of the printing block. The page you are looking for doesn't exist.</p>
+                
+                <div class="error-search">
+                    <input type="text" placeholder="Search our site...">
+                    <button type="button">Search</button>
+                </div>
+                
+                <a href="index.html" class="btn btn-primary">Go Back Home</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="nav-brand" style="color: #fff; margin-bottom: 1rem; display: inline-flex;">
+                        <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: var(--clr-sienna);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Relief Studio
+                    </a>
+                    <p>A premium workshop space dedicated to the preservation and progression of traditional printmaking techniques.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Studio</a></li>
+                        <li><a href="services.html">Workshops</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Linocut</a></li>
+                        <li><a href="#">Woodcut</a></li>
+                        <li><a href="#">Etching</a></li>
+                        <li><a href="#">Screen Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for workshop updates and studio news.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; border: none; outline: none; background: rgba(255,255,255,0.1); color: #fff;">
+                        <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">Ig</a>
+                        <a href="#" aria-label="Facebook">Fb</a>
+                        <a href="#" aria-label="Pinterest">Pi</a>
+                        <a href="#" aria-label="YouTube">Yt</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                        <a href="#" aria-label="Behance">Be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Printmaking & Relief Print Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

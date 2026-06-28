@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printmaking & Relief Print Studio | Workshop Space</title>
+    <meta name="description" content="Premium workshop space for traditional and contemporary printmaking techniques including Linocut, Woodcut, Etching, and Screen Printing.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Printmaking & Relief Print Studio">
+    <meta property="og:description" content="Discover our premium printmaking workshops and studio memberships.">
+    <meta property="og:type" content="website">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArtStudio",
+      "name": "Printmaking & Relief Print Studio",
+      "description": "Premium workshop space for printmaking techniques."
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Relief Studio
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home 1</a>
+                <a href="home-2.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshop.html" class="nav-link">Workshops</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1.5rem; font-size: 0.95rem;">Login</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Premium Hero -->
+        <section class="hero-section" style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden;">
+            <div style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: -2;">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1920" alt="Printmaking Studio" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: -1;"></div>
+            
+            <div class="container reveal">
+                <h1 style="color: #fff; margin-bottom: 1.5rem;">Master the Art of Printmaking</h1>
+                <p style="color: #eee; font-size: 1.25rem; max-width: 600px; margin: 0 auto 2.5rem;">Join our premium workshop space dedicated to traditional and contemporary printmaking techniques.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="services.html" class="btn btn-primary">Explore Workshops</a>
+                    <a href="about.html" class="btn btn-outline" style="color: #fff; border-color: #fff;">Discover Our Studio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Printmaking Techniques -->
+        <section class="py-section">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Featured Techniques</h2>
+                    <p class="text-muted">Discover our core printmaking disciplines.</p>
+                </div>
+                
+                <div class="cards-grid-4 reveal">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1627845341295-c8e9d7ba9d16?auto=format&fit=crop&q=80&w=800" alt="Linocut Printmaking">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Linocut</h3>
+                            <p class="card-text">Learn to carve intricate designs into linoleum blocks for bold, graphic relief prints.</p>
+                            <div class="card-footer">
+                                <a href="services.html" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1582201943021-e8e5b6eb4aa4?auto=format&fit=crop&q=80&w=800" alt="Woodcut Printmaking">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Woodcut</h3>
+                            <p class="card-text">Embrace the natural grain of wood to create expressive, textured artistic prints.</p>
+                            <div class="card-footer">
+                                <a href="services.html" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?auto=format&fit=crop&q=80&w=800" alt="Etching">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Etching</h3>
+                            <p class="card-text">Master the intaglio process using copper plates and acid for fine, detailed line work.</p>
+                            <div class="card-footer">
+                                <a href="services.html" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1549469274-a7457aeb8284?auto=format&fit=crop&q=80&w=800" alt="Screen Printing">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Screen Printing</h3>
+                            <p class="card-text">Explore vibrant color layers and stenciling techniques for contemporary serigraphy.</p>
+                            <div class="card-footer">
+                                <a href="services.html" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Upcoming Workshops Timeline -->
+        <section class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>Upcoming Workshops</h2>
+                    <p class="text-muted">Join our next creative sessions.</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto; position: relative;">
+                    <!-- Timeline Line -->
+                    <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--clr-sienna); transform: translateX(-50%);"></div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; position: relative;">
+                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                            <h4>Intro to Linocut</h4>
+                            <p class="text-muted">October 12th • 10:00 AM</p>
+                        </div>
+                        <div style="width: 20px; height: 20px; background: var(--clr-sienna); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%);"></div>
+                        <div style="width: 45%; padding-left: 2rem;">
+                            <p>Perfect for beginners. Learn the basics of carving and printing your first one-color block.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; position: relative;">
+                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                            <p>Advanced techniques for multiple color layers and precise registration marks.</p>
+                        </div>
+                        <div style="width: 20px; height: 20px; background: var(--clr-sienna); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%);"></div>
+                        <div style="width: 45%; padding-left: 2rem;">
+                            <h4>Multi-Block Woodcut</h4>
+                            <p class="text-muted">October 19th • 1:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+                        <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                            <h4>Drypoint & Monoprint</h4>
+                            <p class="text-muted">October 26th • 10:00 AM</p>
+                        </div>
+                        <div style="width: 20px; height: 20px; background: var(--clr-sienna); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%);"></div>
+                        <div style="width: 45%; padding-left: 2rem;">
+                            <p>Explore expressive, painterly approaches to printmaking without the use of acids.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Meet the Printmakers -->
+        <section class="py-section">
+            <div class="container">
+                <div class="text-center reveal mb-4">
+                    <h2>Meet the Printmakers</h2>
+                    <p class="text-muted">Our resident artists and instructors.</p>
+                </div>
+                <div class="cards-grid-4 reveal">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800" alt="Artist Portrait">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Elena Rossi</h3>
+                            <p class="card-text">Master Linocut Artist</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800" alt="Artist Portrait">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">David Chen</h3>
+                            <p class="card-text">Woodcut Specialist</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Artist Portrait">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Sarah Jenkins</h3>
+                            <p class="card-text">Etching Instructor</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Artist Portrait">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Marcus Thorne</h3>
+                            <p class="card-text">Screen Print Technician</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Studio Membership Benefits -->
+        <section class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>Studio Membership Benefits</h2>
+                    <p class="text-muted">Everything you need to create your best work.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--clr-sienna); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">✓</div>
+                        <div>
+                            <h4>24/7 Studio Access</h4>
+                            <p>Work on your schedule with round-the-clock secure access to our main printroom.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--clr-sienna); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">✓</div>
+                        <div>
+                            <h4>Premium Equipment</h4>
+                            <p>Access to our professional etching presses, drying racks, and exposure units.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--clr-sienna); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">✓</div>
+                        <div>
+                            <h4>Storage Space</h4>
+                            <p>Dedicated flat files and locker space for your paper, blocks, and inks.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--clr-sienna); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">✓</div>
+                        <div>
+                            <h4>Exhibition Opportunities</h4>
+                            <p>Showcase your work in our front gallery during monthly studio open houses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Customer Testimonials -->
+        <section class="py-section">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>What Our Members Say</h2>
+                    <p class="text-muted">Experiences from our creative community.</p>
+                </div>
+                <div class="cards-grid-4">
+                    <div class="card" style="padding: 2rem; border-radius: 8px;">
+                        <p style="font-style: italic; margin-bottom: 1.5rem;">"The finest printmaking facilities in the city. The presses are perfectly maintained and the community is incredibly supportive."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+                            <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&q=80&w=150" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin-bottom: 0; font-size: 1rem;">Amanda R.</h4>
+                                <small class="text-muted">Professional Illustrator</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 2rem; border-radius: 8px;">
+                        <p style="font-style: italic; margin-bottom: 1.5rem;">"Taking the Intro to Linocut workshop completely changed my artistic practice. I'm now a full-time member."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin-bottom: 0; font-size: 1rem;">James T.</h4>
+                                <small class="text-muted">Graphic Designer</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 2rem; border-radius: 8px;">
+                        <p style="font-style: italic; margin-bottom: 1.5rem;">"A beautiful, inspiring space. The natural light in the studio makes working here an absolute joy."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin-bottom: 0; font-size: 1rem;">Chloe S.</h4>
+                                <small class="text-muted">Fine Artist</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 2rem; border-radius: 8px;">
+                        <p style="font-style: italic; margin-bottom: 1.5rem;">"The workshops are extremely detailed. The instructors truly care about passing down these traditional techniques."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-top: auto;">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=150" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin-bottom: 0; font-size: 1rem;">Robert M.</h4>
+                                <small class="text-muted">Art Teacher</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="nav-brand" style="color: #fff; margin-bottom: 1rem; display: inline-flex;">
+                        <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: var(--clr-sienna);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Relief Studio
+                    </a>
+                    <p>A premium workshop space dedicated to the preservation and progression of traditional printmaking techniques.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Studio</a></li>
+                        <li><a href="services.html">Workshops</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Linocut</a></li>
+                        <li><a href="#">Woodcut</a></li>
+                        <li><a href="#">Etching</a></li>
+                        <li><a href="#">Screen Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for workshop updates and studio news.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; border: none; outline: none; background: rgba(255,255,255,0.1); color: #fff;">
+                        <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">Ig</a>
+                        <a href="#" aria-label="Facebook">Fb</a>
+                        <a href="#" aria-label="Pinterest">Pi</a>
+                        <a href="#" aria-label="YouTube">Yt</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                        <a href="#" aria-label="Behance">Be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Printmaking & Relief Print Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

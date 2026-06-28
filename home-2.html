@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 | Printmaking & Relief Print Studio</title>
+    <meta name="description" content="Explore our limited edition prints and studio gallery.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Home 2 Specific Styles */
+        .split-hero {
+            display: flex;
+            min-height: 100vh;
+            padding-top: var(--header-height);
+        }
+        .split-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            background-color: var(--clr-bg-sec);
+        }
+        .split-image {
+            flex: 1;
+            position: relative;
+        }
+        .split-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .masonry-gallery {
+            column-count: 3;
+            column-gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+        .masonry-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .masonry-item:hover .masonry-overlay {
+            opacity: 1;
+        }
+        
+        .horizontal-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 4rem;
+        }
+        .horizontal-timeline::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--clr-border);
+            z-index: 1;
+        }
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+        .timeline-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--clr-bg-main);
+            border: 2px solid var(--clr-sienna);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--clr-sienna);
+        }
+        
+        .tools-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .tool-item {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        .tool-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .tool-item:hover img {
+            transform: scale(1.1);
+        }
+        .tool-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #fff;
+        }
+        .tool-content h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .split-hero {
+                flex-direction: column;
+            }
+            .split-image {
+                min-height: 400px;
+            }
+            .masonry-gallery {
+                column-count: 2;
+            }
+        }
+        @media (max-width: 768px) {
+            .masonry-gallery {
+                column-count: 1;
+            }
+            .horizontal-timeline {
+                flex-direction: column;
+                align-items: center;
+                gap: 3rem;
+            }
+            .horizontal-timeline::before {
+                display: none;
+            }
+            .tools-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Right Top Corner Toggles -->
+    <div class="fixed-toggles">
+        <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">☾</button>
+        <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL">⇄</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Relief Studio
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="home-2.html" class="nav-link active">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="workshop.html" class="nav-link">Workshops</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-primary" style="padding: 0.4rem 1.5rem; font-size: 0.95rem;">Login</a>
+                <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Section 1: Split Hero -->
+        <section class="split-hero">
+            <div class="split-content reveal">
+                <h1>Elevate Your Printmaking</h1>
+                <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 2rem;">A sanctuary for printmakers. Discover exclusive limited edition prints or join our masterclasses to refine your craft.</p>
+                <div class="d-flex gap-3">
+                    <a href="services.html" class="btn btn-primary">Book a Class</a>
+                    <a href="#gallery" class="btn btn-outline">View Gallery</a>
+                </div>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1547822297-bea8eb5e5eab?auto=format&fit=crop&q=80&w=1200" alt="Printmaking Press">
+            </div>
+        </section>
+
+        <!-- Section 2: Limited Edition Prints -->
+        <section class="py-section">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Limited Edition Prints</h2>
+                    <p class="text-muted">Original artworks handcrafted in our studio.</p>
+                </div>
+                
+                <div class="cards-grid-4 reveal">
+                    <!-- Product 1 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 100%;">
+                            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=600" alt="Abstract Etching">
+                        </div>
+                        <div class="card-body" style="text-align: left;">
+                            <h3 class="card-title" style="margin-bottom: 0.5rem;">Midnight Echoes</h3>
+                            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Etching • Edition of 20</p>
+                            <h4 style="color: var(--clr-sienna);">$150</h4>
+                            <div class="card-footer" style="justify-content: flex-start;">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 100%;">
+                            <img src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&q=80&w=600" alt="Botanical Linocut">
+                        </div>
+                        <div class="card-body" style="text-align: left;">
+                            <h3 class="card-title" style="margin-bottom: 0.5rem;">Botanical Series 1</h3>
+                            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Linocut • Edition of 50</p>
+                            <h4 style="color: var(--clr-sienna);">$85</h4>
+                            <div class="card-footer" style="justify-content: flex-start;">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 100%;">
+                            <img src="https://images.unsplash.com/photo-1580136608260-4ebf15bab37f?auto=format&fit=crop&q=80&w=600" alt="Woodcut Landscape">
+                        </div>
+                        <div class="card-body" style="text-align: left;">
+                            <h3 class="card-title" style="margin-bottom: 0.5rem;">Valley Dawn</h3>
+                            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Woodcut • Edition of 30</p>
+                            <h4 style="color: var(--clr-sienna);">$120</h4>
+                            <div class="card-footer" style="justify-content: flex-start;">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="card">
+                        <div class="card-img-wrapper" style="padding-top: 100%;">
+                            <img src="https://images.unsplash.com/photo-1578301978693-85fa9c026109?auto=format&fit=crop&q=80&w=600" alt="Abstract Screenprint">
+                        </div>
+                        <div class="card-body" style="text-align: left;">
+                            <h3 class="card-title" style="margin-bottom: 0.5rem;">Color Theory</h3>
+                            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Screen Print • Edition of 100</p>
+                            <h4 style="color: var(--clr-sienna);">$60</h4>
+                            <div class="card-footer" style="justify-content: flex-start;">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Studio Gallery (Masonry) -->
+        <section id="gallery" class="py-section bg-sec">
+            <div class="container reveal">
+                <div class="text-center">
+                    <h2>Studio Gallery</h2>
+                    <p class="text-muted">A glimpse into our creative process.</p>
+                </div>
+                <div class="masonry-gallery">
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1594122230689-45899d9e6f69?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="masonry-overlay">Studio View</div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1560421683-6856fea585fe?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="masonry-overlay">Ink Rolling</div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1606819717115-9159c900370b?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="masonry-overlay">Carving Details</div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="masonry-overlay">Drying Rack</div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1518331539958-306fbc3b5478?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="masonry-overlay">Finished Work</div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1615707662886-f1c5040f7bdf?auto=format&fit=crop&q=80&w=800" alt="Gallery Image">
+                        <div class="masonry-overlay">Press Setup</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Workshop Experience Timeline -->
+        <section class="py-section">
+            <div class="container reveal">
+                <div class="text-center mb-4">
+                    <h2>The Workshop Experience</h2>
+                    <p class="text-muted">How our printmaking sessions work.</p>
+                </div>
+                <div class="horizontal-timeline">
+                    <div class="timeline-step">
+                        <div class="timeline-icon">1</div>
+                        <h4>Design</h4>
+                        <p class="text-muted">Draft and transfer your original sketch onto the printing block.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-icon">2</div>
+                        <h4>Carve</h4>
+                        <p class="text-muted">Use professional gouges to carefully carve away the negative space.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-icon">3</div>
+                        <h4>Ink</h4>
+                        <p class="text-muted">Roll out a perfectly even layer of premium archival ink.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-icon">4</div>
+                        <h4>Print</h4>
+                        <p class="text-muted">Run your block through our vintage etching presses for the final reveal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Printmaking Tools Showcase -->
+        <section>
+            <div class="tools-showcase">
+                <div class="tool-item">
+                    <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&q=80&w=900" alt="Carving Tools">
+                    <div class="tool-content">
+                        <h3>Precision Gouges</h3>
+                        <p>Swiss-made carving tools for the finest details.</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <img src="https://images.unsplash.com/photo-1605330058473-b3c9569766e0?auto=format&fit=crop&q=80&w=900" alt="Brayers and Rollers">
+                    <div class="tool-content">
+                        <h3>Professional Brayers</h3>
+                        <p>High-density rubber rollers for flawless ink application.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Premium Booking CTA -->
+        <section class="py-section" style="background: url('https://images.unsplash.com/photo-1608226065538-23fb6dd8c7f9?auto=format&fit=crop&q=80&w=1920') center/cover fixed; position: relative;">
+            <div style="position: absolute; inset: 0; background: rgba(43, 43, 43, 0.85);"></div>
+            <div class="container text-center reveal" style="position: relative; z-index: 2; color: #fff;">
+                <h2 style="color: #fff; font-size: 3rem; margin-bottom: 1.5rem;">Ready to Get Your Hands Dirty?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-inline: auto;">Book your next workshop session or secure a monthly studio membership today.</p>
+                <a href="pricing.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 3rem;">View Pricing & Availability</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <a href="index.html" class="nav-brand" style="color: #fff; margin-bottom: 1rem; display: inline-flex;">
+                        <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: var(--clr-sienna);"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Relief Studio
+                    </a>
+                    <p>A premium workshop space dedicated to the preservation and progression of traditional printmaking techniques.</p>
+                </div>
+                <div class="footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Studio</a></li>
+                        <li><a href="services.html">Workshops</a></li>
+                        <li><a href="pricing.html">Memberships</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Linocut</a></li>
+                        <li><a href="#">Woodcut</a></li>
+                        <li><a href="#">Etching</a></li>
+                        <li><a href="#">Screen Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for workshop updates and studio news.</p>
+                    <form style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; border: none; outline: none; background: rgba(255,255,255,0.1); color: #fff;">
+                        <button type="button" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">Ig</a>
+                        <a href="#" aria-label="Facebook">Fb</a>
+                        <a href="#" aria-label="Pinterest">Pi</a>
+                        <a href="#" aria-label="YouTube">Yt</a>
+                        <a href="#" aria-label="LinkedIn">Li</a>
+                        <a href="#" aria-label="Behance">Be</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Printmaking & Relief Print Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
