@@ -557,9 +557,16 @@ textarea.form-control:not(:placeholder-shown) ~ .floating-label {
 
 /* Page Headers */
 .page-header {
-  padding: 10rem 0 6rem;
-  background-color: var(--clr-bg-sec);
+  padding: 12rem 0 8rem;
+  background-color: var(--clr-sienna);
   text-align: center;
+  color: #fff;
+}
+.page-header h1 {
+  color: #fff;
+}
+.page-header .text-muted {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Responsive */
