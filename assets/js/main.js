@@ -47,9 +47,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Mobile Menu Toggle
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.nav-menu');
-  if (mobileToggle && navMenu) {
+  const navActions = document.querySelector('.nav-actions');
+
+  if (mobileToggle && navMenu && navActions) {
+      // Create a container for the mobile actions if it doesn't exist
+      let mobileActionsContainer = navMenu.querySelector('.mobile-actions-container');
+      if (!mobileActionsContainer) {
+          mobileActionsContainer = document.createElement('div');
+          mobileActionsContainer.className = 'mobile-actions-container';
+          navMenu.appendChild(mobileActionsContainer);
+      }
+
+      // Move buttons on load and resize
+      const handleResize = () => {
+          if (window.innerWidth <= 1024) {
+              // move to navMenu
+              const buttonsToMove = navActions.querySelectorAll('.toggle-btn, .btn');
+              buttonsToMove.forEach(btn => mobileActionsContainer.appendChild(btn));
+          } else {
+              // move back to navActions
+              const buttonsToMove = mobileActionsContainer.querySelectorAll('.toggle-btn, .btn');
+              // insert before mobileToggle
+              buttonsToMove.forEach(btn => navActions.insertBefore(btn, mobileToggle));
+          }
+      };
+
+      window.addEventListener('resize', handleResize);
+      handleResize(); // trigger on load
+
       mobileToggle.addEventListener('click', () => {
           navMenu.classList.toggle('show');
+          // Prevent body scroll when menu is open
+          document.body.style.overflow = navMenu.classList.contains('show') ? 'hidden' : '';
       });
   }
 
@@ -156,6 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
               strengthMeter.style.width = '100%';
               strengthMeter.style.backgroundColor = 'green';
           }
+      });
+  }
+
+  // 8. Scroll to Top Button
+  const scrollTopBtn = document.getElementById('scrollToTop');
+  if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+              scrollTopBtn.classList.add('visible');
+          } else {
+              scrollTopBtn.classList.remove('visible');
+          }
+      });
+      scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
       });
   }
 
